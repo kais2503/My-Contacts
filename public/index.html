@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-app="main">
+  <table ng-controller="appCtrl">
+    <tr>
+        <td><input type='text '  ng-model="x.name" ></td>
+          <td><input type='text ' ng-model="x.phone" ></td>
+            <td><input type='text ' ng-model="x.email" ></td>
+            <td><button ng-click='add()'>Add</button></td>
+              <td><button ng-click='update()'>update</button></td>
+
+    </tr>
+<tr>
+    <td>name</td>
+      <td>phone</td>
+        <td>email</td>
+
+</tr>
+<tr ng-repeat="e in data">
+    <td>{{e.name}}</td>
+      <td>{{e.phone}}</td>
+        <td>{{e.email}}</td>
+        <td><button ng-click="edit(e._id)">edit</button></td>
+          <td><button ng-click="delete(e._id)">delete</button></td>
+
+</tr>
+  </table>
+    <script src="angular.min.js"></script>
+        <script src="module.js"></script>
+  </body>
+</html>
