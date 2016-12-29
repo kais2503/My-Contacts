@@ -16,8 +16,6 @@ app.route('/api/:id')
 .get(Contact.list)
 .put(Contact.update)
 .delete(Contact.delete)
-
-
-http.listen(process.env.PORT || 3000, function(){
-  console.log('listening on', http.address().port);
-});
+app.listen(process.env.PORT ||3000, function () {
+  console.log('Example app listening on port 3000!');
+})
