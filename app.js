@@ -2,7 +2,7 @@ var express = require('express');
 var mongoose=require('mongoose');
 var bodyParser = require('body-parser');
 var Contact= require('./contactController')
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://example:example@ds053312.mongolab.com:53312/todolist');
 var app = express();
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
